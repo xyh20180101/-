@@ -1,0 +1,23 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        input:InputMethod.IsInputMethodEnabled="False"
+        x:Name="Window"
+        Title="Clock" Height="1920" Width="1080" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" KeyDown="Window_KeyDown" MouseMove="Window_MouseMove" Loaded="Init" ContentRendered="Window_ContentRendered" ShowInTaskbar="False" WindowState="Maximized" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="TimeLabel" Content="00:00:00" FontSize="120" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <Label Grid.Row="1" x:Name="ColorLabel" Content="#000000" FontSize="80" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Grid>
+    <Window.Background>
+        <SolidColorBrush x:Name="BackGroundBrush" Opacity="0.5" Color="#000000"></SolidColorBrush>
+    </Window.Background>
+</Window>
